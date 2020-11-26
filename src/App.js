@@ -1,8 +1,6 @@
 import {useState, useEffect} from 'react'
 import './App.css';
 import Menu from './components/Menu'
-import Categories from './components/Categories'
-import Item from './components/Item'
 import list from './data/data'  
 
 
@@ -37,6 +35,10 @@ function App() {
         if(category === item.category)
         {
           return item
+        }
+        else
+        {
+          return null;
         }
       })
       setMenuItems(filteredItems)
